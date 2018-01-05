@@ -1,0 +1,43 @@
+{
+  "name": "cuttinscrap",
+  "version": "1.0.0",
+  "description": "Website for the CuttinScrap channel",
+  "main": "index.js",
+  "scripts": {
+    "pug": "pug templates/pages -o .",
+    "pug:watch": "npm run pug -- -w",
+    "sass": "node-sass static/sass/main.sass | postcss -o static/css/main.css",
+    "build": "npm run pug & npm run sass",
+    "watch": "watch -p \"**/*.sass\" -p \"**/*.scss\" -p \"**/*.pug\" -c \"npm run build\"",
+    "start": "npm run watch"
+  },
+  "author": "Waylon Walker",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuttinscrap/cuttinscrap.github.io.git"
+  },
+  "keywords": [
+    "YouTube",
+    "Website"
+  ],
+  "bugs": {
+    "url": "https://github.com/cuttinscrap/cuttinscrap.github.io/issues"
+  },
+  "homepage": "https://github.com/cuttinscrap/cuttinscrap.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.2",
+    "child_process": "^1.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.2",
+    "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
+    "acorn": "^5.3.0",
+    "jstransformer-markdown-it": "^2.0.0"
+  }
+}

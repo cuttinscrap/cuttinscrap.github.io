@@ -1,0 +1,37 @@
+nav
+    width: 100%
+    grid-area: nav
+
+    #site-navigation
+
+        a
+            text-decoration: none
+            color: $teal
+        
+            &:hover
+                color: darken($teal, 10%)
+        
+        ul
+            list-style-type: none
+            margin: auto
+            max-width: 500px
+            padding: 1rem
+            
+            li
+                flex: 1 1 auto
+                text-align: center
+                margin: 1rem
+
+            .fixed
+            
+                position: fixed
+                bottom: 0px
+                padding: 1rem
+                width: 100%
+                margin: auto
+        
+@include breakpoint(sm)
+    #site-navigation
+        ul
+
+            display: flex
