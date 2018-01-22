@@ -1,0 +1,17 @@
+extends ../../../layout/layout
+
+block append config
+    -
+        config.title = "The Moment life stops...";
+        config.description = `"You have cancer, a carcinoid tumor in your left lung."These were the words I heard Wednesday, November 23, 2016 at 12:20pm. This is the exact moment in time, when I started questioning my future.`;
+        config.url = "http =//www.cuttinscrap.com/blog/1";
+        config.card = "summary";
+        config.disqus = true;
+        config.blog = true;
+    -
+
+block content
+    
+    div.card    
+        include:markdown-it content.md
+

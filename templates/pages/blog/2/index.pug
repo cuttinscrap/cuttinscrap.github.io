@@ -1,0 +1,21 @@
+extends ../../../layout/layout
+
+block append config
+    -
+        config.title = "Waiting";
+        config.description = "I've always struggled with patience. I like to seek immediate results. I can't even wait to give presents. So you can see how waiting for a life changing result would affect me. My heart is racing, and I can barely sit still, let alone sleep. I just want answers!";
+        config.url = "http =//www.cuttinscrap.com/blog/2";
+        config.card = "summary";
+        config.disqus = true;
+        config.blog = true;
+    -
+
+    
+
+block content
+
+    div.card    
+        include:markdown-it content.md    
+
+
+

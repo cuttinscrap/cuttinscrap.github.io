@@ -1,12 +1,15 @@
-body
-    border: 1rem solid rgba(0, 0, 0, 0)
-    @include breakpoint(sm)
-        display: grid
-        grid-template-areas: "logo logo"  "nav nav" "content about_rhiannon" "content socials" "disqus disqus" "foot foot"
-        grid-template-columns: 2fr 1fr
-        grid-template-rows: auto auto 600px auto
-        grid-gap: 3rem
+// body
+//     border: 1rem solid rgba(0, 0, 0, 0)
+//     @include breakpoint(sm)
+//         display: grid
+//         grid-template-areas: "logo logo"  "nav aboutnav_rhiannon" "content about_rhiannon" "content socials" "disqus disqus" "foot foot"
+//         grid-template-columns: 2fr 1fr
+//         grid-template-rows: auto auto 600px auto
+//         grid-gap: 3rem
         
+#blog-promo
+    margin-top: 5rem
+    margin-bottom: 10rem
 #disqus
     grid-area: disqus
     margin: auto

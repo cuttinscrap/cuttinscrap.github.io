@@ -1,0 +1,21 @@
+extends ../../../layout/layout
+
+block append config
+    -
+        config.title = "Christmas Time....ehhh";
+        config.description = "Christmas is two weeks away and traffic is insane in Peoria. I am struggling to find the cheer that the holiday season usually brings.";
+        config.url = "http =//www.cuttinscrap.com/blog/4/";
+        config.card = "summary";
+        config.disqus = true;
+        config.blog = true;
+    -
+
+    
+
+block content
+
+    div.card    
+        include:markdown-it content.md    
+
+
+

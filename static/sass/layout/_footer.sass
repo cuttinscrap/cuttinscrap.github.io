@@ -1,11 +1,8 @@
 footer
     text-align: center
     grid-area: foot
-    // position: fixed
-    // bottom: 0px
-    padding: 1rem
-    width: 100%
     margin: auto
+    margin-top: 5rem
     
     a
         text-decoration: none
@@ -21,4 +18,11 @@ footer
             flex: 1 1 auto
             text-align: center
             margin: 0.5rem
-            
+    
+    @include breakpoint(xs)
+        ul
+            margin-top: 1.5rem
+            font-size: 1.5rem
+        .username
+            display: none
+                

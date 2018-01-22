@@ -1,10 +1,10 @@
 #socials
     grid-area: socials
-    font-size: 1.3rem 
+    font-size: 1.8rem 
     max-width: 300px 
-    display: block
+    display: block    
     text-align: center
-    padding: 1rem
+    padding: 4rem 1rem
     margin: 0 auto
     
     i
@@ -25,18 +25,20 @@
     ul
         list-style-type: none
         display: flex
+        justify-content: space-around
         margin: auto
         max-width: 200px
         
         li
             border-radius: 50% 
-            flex: 1 1 auto
+            // flex: 1 1 auto
             text-align: center
-            margin: 0.5rem
+            margin: 1rem
     
     img
         display: none
     @include breakpoint(sm)
+        font-size: 1rem
         img
             // display: block
             width: 200px
