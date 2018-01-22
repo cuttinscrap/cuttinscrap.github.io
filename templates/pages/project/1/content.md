@@ -2,7 +2,7 @@
 
 _July 1, 2015 -  Always Learning New Techniques_
 
-![woodland creatures](/static/img/projects/woodland-applique.jpg)
+![woodland creatures](/static/img/Projects/woodland-applique.jpg)
 
 
 When I got the news that my close friend is having a baby, I knew right away that I wanted to make a quilt for her baby shower.  I was so excited to take on this task, but at the same time I was worried it would not be done in time. My previous project took me 3 years…seriously!!! That’s why I went on a search for an easy method to making a cute project. I came across this Craftsy class.  This is not sponsored by the way, just what I used.  The official title was **[Fusible Applique Made Easy](https://www.craftsy.com/quilting/classes/fusible-appliqu-made-easy/44985)** by _[Wendi Gratz](https://www.shinyhappyworld.com/aboutcontact)_
