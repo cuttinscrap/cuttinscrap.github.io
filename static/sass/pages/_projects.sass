@@ -43,7 +43,6 @@
             margin: auto
             border-radius: $br
             box-shadow: $bs
-            
         
         p:first-of-type
             padding: 0.5rem
@@ -57,3 +56,24 @@
             font-family: 'Shadows Into Light', cursive
             border-left: 4px solid $teal
             background: none 
+    
+    .right
+        float: right
+        position: relative
+        margin: 1rem
+
+    .left
+        float: left
+        position: relative
+        margin: 1rem
+
+    .small
+        max-width: 150px
+        
+    .right-sm
+        @extend .right
+        @extend .small
+        
+    .left-sm
+        @extend .left
+        @extend .small
