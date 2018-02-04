@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    btn = document.getElementById('nav-btn')
+    ham = document.getElementById('ham')
+    x = document.getElementById('x')
     nav = document.querySelector('nav')
     logo = document.getElementById('logo')
     logoHeight = logo.clientHeight
     // document.getElementById('logo-wrapper').style.height = `${logoHeight}px`
 
-    btn.onclick = navOn
+    ham.onclick = navOn
+    x.onclick = navOn
+
     // window.addEventListener('scroll', debounce(onScroll, 50))
 
     function navOn(event) {

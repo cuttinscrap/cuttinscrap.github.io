@@ -1,10 +1,10 @@
-#socials
+.socials
     grid-area: socials
     font-size: 1.8rem 
     max-width: 300px 
     display: block    
     text-align: center
-    padding: 4rem 1rem
+    padding: 1rem 1rem
     margin: 0 auto
     
     i
@@ -37,8 +37,8 @@
     
     img
         display: none
-    @include breakpoint(sm)
-        font-size: 1rem
+    // @include breakpoint(sm)
+        // font-size: 1.4rem
         img
             // display: block
             width: 200px
@@ -46,3 +46,9 @@
         
         .title
             // display: none
+#instafeed
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    img
+        margin: 1rem

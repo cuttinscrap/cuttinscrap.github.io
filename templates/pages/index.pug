@@ -1,11 +1,33 @@
 extends ../layout/layout
-        
+
+block append head
+    script(src="/static/js/blog.js")
+    script(src="/static/js/insta.js")
 block content
     div#hero.card
         h1 Welcome!
         p
-            em to Cuttin Scrap
 
         //- img(src="/static/img/Projects/woodland-applique.jpg", alt="")
         include ../layout/about
+        //- include project/index
 
+    #instagram
+        //- include insta.html
+        //- include blog/index
+    #blog-promo
+        //- h3 Check out our other projects
+        #latest-blog.card.hide
+
+    #project-promo
+        //- h3 Check out our other projects
+        #latest-project.card.hide
+
+block script
+    script.
+        document.addEventListener("DOMContentLoaded", function () {
+            blog = new Blog('blog')
+            project = new Blog('project')
+            blog.promo('/blog/', '#latest-blog')
+            project.promo('/project/', '#latest-project')
+        })

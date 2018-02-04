@@ -8,8 +8,8 @@ const gulp = require('gulp')
     browserSync = require('browser-sync').create()
     py_files = '**/*.py'
     pug_files = 'templates/pages/**/*.pug'
+    pug_watch_files = ['templates/**/*.pug', 'templates/pages/**/*.md'] 
     pug_dest = '.'
-    md_files = 'templates/pages/**/*.md'
     js_files = 'static/es6/**/*.js'
     js_dest = 'static/js'
     sass_watch_files = ['static/sass/**/*.sass', 'static/sass/**/*.scss']
@@ -67,8 +67,8 @@ gulp.task('browserSync', function(){
 
 gulp.task('watch', ['pug', 'sass', 'js', 'browserSync'], function(){
     gulp.watch(sass_watch_files, ['sass-watch']);
-    gulp.watch([pug_files, md_files], ['pug-watch'])
-    gulp.watch([js_files, sass_files, pug_files, md_files], reload)
+    gulp.watch([pug_watch_files], ['pug-watch'])
+    gulp.watch([js_files, sass_files, pug_files], reload)
     gulp.watch([js_files], ['js-watch'])
 })
 
