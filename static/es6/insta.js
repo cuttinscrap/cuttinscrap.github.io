@@ -13,5 +13,3 @@ var feed = new Instafeed({
 });
 
 feed.run()
-
-console.log(template)
