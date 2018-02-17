@@ -8,6 +8,9 @@ const gulp = require('gulp')
     browserSync = require('browser-sync').create()
     plumberNotifier = require('gulp-plumber-notifier')
     reload = browserSync.reload
+    data = require('gulp-data')
+    fs = require('fs')
+    log = require('fancy-log')
 
     py_files = '**/*.py'
     pug_files = 'templates/pages/**/*.pug'
@@ -21,10 +24,24 @@ const gulp = require('gulp')
     sass_files = ['static/sass/main.sass']
     css_dest = 'static/css'
 
+
+    blog_map_file = 'templates/pages/blog/map.json'
+    project_map_file = 'templates/pages/project/map.json'
+
 gulp.task('pug', function(){
     return gulp
     .src(pug_files)
-    .pipe(plumberNotifier())
+    .pipe(data(function(file){
+        blog_map = JSON.parse(
+            fs.readFileSync(blog_map_file))
+        return blog_map;
+    }))
+    .pipe(data(function(file){
+        project_map = JSON.parse(
+            fs.readFileSync(project_map_file))
+        return project_map;
+    }))
+   .pipe(plumberNotifier())
     .pipe(pug())
     .pipe(gulp.dest(pug_dest))
 })

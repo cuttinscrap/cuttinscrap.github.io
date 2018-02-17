@@ -29,7 +29,7 @@ function Blog(root=false) {
         this.prev_url = `/${this.root}/${this.n - 1}/`
     }
 
-    this.promo = function(url, div) {
+    this.promo = function(url, div, em='') {
         fetch(url)
             .then((resp) => resp.text())
             .then((data) => {
@@ -40,7 +40,7 @@ function Blog(root=false) {
                 next_post = document.querySelector(div)
                 next_post.innerHTML = `
                <h1><a href="${url}">${title}</a></h1>
-               <p></p>
+               <p><em>${em}</em></p>
                <p>
                ${description} 
                <a href="${url}/">Read More <i class = "fa fa-long-arrow-right" aria-hidden='true'></i></a>

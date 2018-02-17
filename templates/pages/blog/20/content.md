@@ -1,5 +1,5 @@
 # Short, Sappy, Necessary Blog
-_1-25-2018_
+_January 25, 2018_
 
 I read the fairy tales that talked of a princess stranded and waiting for her knight in shining armor to come and rescue her.  I grew up watching the chick flicks with my mom, and the general consensus was the same.  These stories were all fake.  These things never happened right?  Well, I’m no princess.  But I have a knight in shining armor.
 

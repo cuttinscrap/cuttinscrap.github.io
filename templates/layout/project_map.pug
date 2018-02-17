@@ -1,0 +1,10 @@
+ul
+    for page in project_map
+        li
+            details
+                summary
+                    a(href=page['link'])=page['title']
+
+                p=page['title']
+                p=page['date']
+                p=page['desc']

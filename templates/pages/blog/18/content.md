@@ -1,5 +1,5 @@
 # When to pause Netflix?
-_1-4-2018_
+_January 4, 2018_
 
 There is something about being sick, that also makes you paranoid.  I will start to wheeze or cough up blood and instantly feel the need to retreat into a spiral of Google.  I'm not not a hypochondriac, but I am seriously ill.
 

@@ -66,6 +66,8 @@ block body
             //- include ../layout/socials
             include ../layout/navigation
             
+        //- include latest_video
+
         div#content
             if config.blog
                 include blog_intro
@@ -73,12 +75,27 @@ block body
                 include project_intro
 
             block content
-
+            
             if config.blog
-                #blog-promo
-                    //- h3 Check out our other blog posts 
-                    #next.card.hide
-                    #prev.card.hide
+                #blog-map.card
+                    h1 Other Posts
+                    p
+                        em personal blog
+                    include blog_map
+
+            if config.project
+                #blog-map.card
+                    h1 Other Projects
+                    p
+                        em 
+                    include project_map
+
+
+            //- if config.blog
+            //-     #blog-promo
+            //-         //- h3 Check out our other blog posts 
+            //-         #next.card.hide
+            //-         #prev.card.hide
             if config.project
                 #blog-promo
                     //- h3 Check out our other projects
@@ -88,10 +105,9 @@ block body
             #instagram.card
                 h1 #[a(href='https://www.instagram.com/cuttin.scrap/') #[i.fa.fa-instagram(aria-hidden='true')] #[span(style='font-size:1rem;vertical-align:middle;') |] CuttinScrap]
                 p
-                    em 
+                    em follow us
                 #instafeed
             
-            include latest_video
             
             //- include ../pages/youtube.html
 
