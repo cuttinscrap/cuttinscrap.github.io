@@ -10,20 +10,24 @@ function Blog(root=false) {
     if (!root){
         this.root = this.url.substr(1, this.url.substr(1).search('/'))
         this.n = parseInt(this.url.slice(this.url.substr(1).search('/') + 2, this.url.lastIndexOf('/')))
+    } else {
+        this.root = root
     }
 
     if (isNaN(this.n)) {
         try {
             this.n = document.querySelector(`meta[name='${this.root}:n']`).getAttribute('content')
-            
+           this.next_url = `/${this.root}/1/`
+            this.prev_url = `/${this.root}/${this.n - 1}/`           
         } catch (TypeError) {
             this.n = 1
-        }
-        this.next_url = `/${this.root}/1/`
-        this.prev_url = `/${this.root}/${this.n - 1}/`
+            this.next_url = `/${this.root}/`
+            this.prev_url = `/${this.root}/1/`
+              }
+
     } else if (this.n === 1) {
         this.next_url = `/${this.root}/${this.n + 1}/`
-        this.prev_url = `/${this.root}/`
+        this.prev_url = `/${this.root}/1/`
     } else {
         this.next_url = `/${this.root}/${this.n + 1}/`
         this.prev_url = `/${this.root}/${this.n - 1}/`

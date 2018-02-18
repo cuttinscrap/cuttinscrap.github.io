@@ -1,5 +1,18 @@
 extends ../layout/layout
 
+block append config
+    -
+        config.title = "CuttinScrap";
+        config.description = "Welcome to Cuttin Scrap";
+        config.url = "http://www.cuttinscrap.com/";
+        config.card = "summary";
+        config.disqus = true;
+        config.time = 'January 1, 2018';
+        config.blog_promo = 1;
+        config.project_promo = 1;
+        config.disqus = 0;
+    -
+
 block append head
     script(src="/static/js/blog.js")
 
@@ -11,22 +24,22 @@ block content
         //- include project/index
     include ../layout/latest_video
 
-    #instagram
-        //- include insta.html
-        //- include blog/index
-    #blog-promo
-        //- h3 Check out our other projects
-        #latest-blog.card.hide
+//-     #instagram
+//-         //- include insta.html
+//-         //- include blog/index
+//-     #blog-promo
+//-         //- h3 Check out our other projects
+//-         #latest-blog.card.hide
 
-    #project-promo
-        //- h3 Check out our other projects
-        #latest-project.card.hide
+//-     #project-promo
+//-         //- h3 Check out our other projects
+//-         #latest-project.card.hide
 
-block script
-    script.
-        document.addEventListener("DOMContentLoaded", function () {
-            blog = new Blog('blog')
-            project = new Blog('project')
-            blog.promo('/blog/', '#latest-blog', 'Latest Blog')
-            project.promo('/project/', '#latest-project', 'Latest Project')
-        })
+//- block script
+//-     script.
+//-         document.addEventListener("DOMContentLoaded", function () {
+//-             blog = new Blog('blog')
+//-             project = new Blog('project')
+//-             blog.promo('/blog/', '#latest-blog', 'Latest Blog')
+//-             project.promo('/project/', '#latest-project', 'Latest Project')
+//-         })

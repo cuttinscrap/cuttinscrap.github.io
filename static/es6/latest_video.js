@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function Video(){
     this.div = document.getElementById('youtube_video')
     this.title_div = document.getElementById('youtube_title')
+    this.desc_div = document.getElementById('desc')
     this.channelID = "UCg7ZCfygUJMoMC6AcfIaH1A";
     this.url = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D' + this.channelID 
     this.embed = function(){
@@ -24,6 +25,7 @@ function Video(){
             .then(src => this.src = "https://youtube.com/embed/" + this.id + "?controls=0&showinfo=0&rel=0")
             .then(embed => this.div.setAttribute('src', src = this.src))
             .then(title => this.title_div.innerHTML = `<a href='${this.link}'>${this.title}</a>`)
+            // .then(des => this.desc_div.innerHTML = `${this.desc}`)
     }
 
     // this.link = this.data.items[0].link;
@@ -31,4 +33,4 @@ function Video(){
     // this.embed = function(){
     //     // this.div.setAttribute('src', src = this.src)
     // }
-}
+} 

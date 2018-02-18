@@ -15,7 +15,9 @@ block config
             author: "Rhiannon Walker",
             disqus:false,
             blog: 0,
-            project: 0
+            project: 0,
+            blog_promo: 0,
+            project_promo: 0
         };
     -
 
@@ -53,9 +55,9 @@ head
         script(src="/static/js/insta.js")
         script(src='/static/js/latest_video.js')
 
-        if config.blog 
+        if config.blog_promo 
             script(src="/static/js/blog.js")
-        if config.project
+        if config.project_promo
             script(src="/static/js/blog.js")
 
 block body
@@ -65,54 +67,49 @@ block body
             include ../layout/logo
             //- include ../layout/socials
             include ../layout/navigation
-            
-        //- include latest_video
 
-        div#content
-            if config.blog
-                include blog_intro
-            if config.project
-                include project_intro
+        #intro.card-clear
+            block intro
+                if config.blog
+                    include blog_intro
+                if config.project
+                    include project_intro
 
+        #content
             block content
             
-            if config.blog
-                #blog-map.card
-                    h1 Other Posts
-                    p
-                        em personal blog
-                    include blog_map
-
-            if config.project
-                #blog-map.card
-                    h1 Other Projects
-                    p
-                        em 
-                    include project_map
-
-
-            //- if config.blog
-            //-     #blog-promo
-            //-         //- h3 Check out our other blog posts 
-            //-         #next.card.hide
-            //-         #prev.card.hide
-            if config.project
-                #blog-promo
-                    //- h3 Check out our other projects
-                    #next.card.hide
-                    #prev.card.hide
-
-            #instagram.card
-                h1 #[a(href='https://www.instagram.com/cuttin.scrap/') #[i.fa.fa-instagram(aria-hidden='true')] #[span(style='font-size:1rem;vertical-align:middle;') |] CuttinScrap]
+        if config.blog
+            #blog-map.card
+                h1 Other Posts
                 p
-                    em follow us
-                #instafeed
+                    em personal blog
+                include blog_map
+
+        if config.project
+            #blog-map.card
+                h1 Other Projects
+                p
+                    em 
+                include project_map
+        #blog-promo
+            if config.project_promo
+                #next-project.card.hide
+                #prev-project.card.hide
+            if config.blog_promo
+                #next-blog.card.hide
+                #prev-blog.card.hide
+
+        #instagram.card
+            h1 #[a(href='https://www.instagram.com/cuttin.scrap/') #[i.fa.fa-instagram(aria-hidden='true')] #[span(style='font-size:1rem;vertical-align:middle;') |] CuttinScrap]
+            p
+                em follow us
+            #instafeed
             
             
             //- include ../pages/youtube.html
 
-        div#disqus
-            if config.disqus
+        if config.disqus
+            div#disqus
                 include ../layout/disqus
                 
         block footer
@@ -121,18 +118,18 @@ block body
 
 block script
 
-    if config.blog
+    if config.blog_promo
         script.
             document.addEventListener("DOMContentLoaded", function () {
-                blog = new Blog()
-                blog.promo(blog.next_url, '#next')
-                blog.promo(blog.prev_url, '#prev')
+                blog = new Blog(root='blog')
+                blog.promo(blog.next_url, '#next-blog', em='Latest Blog')
+                //- blog.promo(blog.prev_url, '#prev-blog', em='')
             })
 
-    if config.project
+    if config.project_promo
         script.
             document.addEventListener("DOMContentLoaded", function () {
-                blog = new Blog()
-                blog.promo(blog.next_url, '#next')
-                blog.promo(blog.prev_url, '#prev')
+                blog = new Blog('project')
+                blog.promo(blog.next_url, '#next-project', em='Latest Project')
+                //- blog.promo(blog.prev_url, '#prev-project')
             })

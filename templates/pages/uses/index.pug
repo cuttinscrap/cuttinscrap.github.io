@@ -1,7 +1,22 @@
 extends ../../layout/layout
-        
-block content
+
+block append config
+    -
+        config.title = "Uses";
+        config.description = "What We Use at Cuttin Scrap";
+        config.url = "http://www.cuttinscrap.com/uses";
+        config.card = "summary";
+        config.disqus = true;
+        config.time = 'January 1, 2018';
+        config.blog_promo = 1;
+        config.project_promo = 1;
+        config.disqus = 0;
+    -
+block intro
     h1 Tools We Use
+    p
+        em at Cuttin Scrap
+block content
 
     div#uses
 
