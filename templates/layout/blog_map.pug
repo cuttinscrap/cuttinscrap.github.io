@@ -1,10 +1,14 @@
 ul
+    //- for page in blog_map
+    //-     li
+    //-         details
+    //-             summary
+    //-                 a(href=page['link'])=page['date']
+    //-                 | -
+    //-                 =page['title']
+    //-             p=page['title']
+    //-             p=page['desc']
     for page in blog_map
         li
-            details
-                summary
-                    a(href=page['link'])=page['date']
-                    | -
-                    =page['title']
-                p=page['title']
-                p=page['desc']
+            a(href=page['link'])=page['date']
+            p=page['title']
