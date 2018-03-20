@@ -8,3 +8,10 @@ I'm ok. Still in the ER. There was a ditch fire that got out of hand and a traff
 Wyatt showed a level of bravery I would have never expected.  I'm proud to know we are raising him right.
 
 My heart is full.  I love my little Bubby.
+
+
+![Wyatt](/static/img/blog/20180226_163330.jpg)
+
+
+
+<img src="/static/img/blog/20180226_163330.jpg">
