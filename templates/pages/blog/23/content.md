@@ -12,6 +12,4 @@ My heart is full.  I love my little Bubby.
 
 ![Wyatt](/static/img/blog/20180226_163330.jpg)
 
-
-
 <img src="/static/img/blog/20180226_163330.jpg">

@@ -42,7 +42,7 @@ gulp.task('pug', function(){
         return project_map;
     }))
    .pipe(plumberNotifier())
-    .pipe(pug())
+    .pipe(pug({pretty: true}))
     .pipe(gulp.dest(pug_dest))
 })
 
