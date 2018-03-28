@@ -1,0 +1,22 @@
+extends ../../../layout/layout
+
+block append config
+    -
+        config.title = "Denied for Disability";
+        config.description = "if you live with murphy and his friends debt and collection agency. there is hope for you.";
+        config.url = "http://www.cuttinscrap.com/blog/24";
+        config.card = "summary";
+        config.disqus = true;
+        config.blog = 24;
+        config.time = 'March 27, 2018';
+    -
+
+    
+
+block content
+
+    div.card    
+        include:markdown-it content.md    
+
+
+
