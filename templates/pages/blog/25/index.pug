@@ -1,0 +1,22 @@
+extends ../../../layout/layout
+
+block append config
+    -
+        config.title = "The Boulder and Me";
+        config.description = "When life throws us challenges our minds go to their comfort zones.  For some people that’s a religious factor and for others it could mean they reach to within";
+        config.url = "http://www.cuttinscrap.com/blog/25";
+        config.card = "summary";
+        config.disqus = true;
+        config.blog = 25;
+        config.time = '2018-04-02';
+    -
+
+    
+
+block content
+
+    div.card    
+        include:markdown-it content.md    
+
+
+
