@@ -7,11 +7,12 @@ nav
     //     left: -2rem
     font-size: 1.4rem
     width: calc(100vw - 4rem)
+    width: 100vw
     grid-area: nav
     // min-height: 500px
 
     // max-width: 800px
-    margin: auto
+    // margin: auto
     // padding: 0 1rem
     display: block
     #ham, #X
@@ -19,7 +20,7 @@ nav
         // text-align: left
         vertical-align: middle
         // padding: 2rem 0rem
-        margin: 0 4rem 0 0
+        // margin: 0 4rem 0 0
         cursor: pointer
 
     #nav-btn
@@ -36,6 +37,8 @@ nav
 
 
         a
+            padding: 1.5rem
+            // margin: 1.5rem
             text-decoration: none
             color: $teal
         
@@ -45,12 +48,13 @@ nav
         ul
             // display: none
             list-style-type: none
-            margin: auto
-            max-width: 500px
-            padding: 1rem
+            margin: none
+            padding: none
+            // max-width: 500px
             
             li
-                margin: 1.5rem
+                // margin: 1.5rem
+                line-height: 3.5rem
                 opacity: 0
 
             .fixed
@@ -135,6 +139,7 @@ nav.on
 
                 display: flex
                 justify-content: center
+
         #nav-btn
             font-size: 1.4rem
             margin-left: 4rem

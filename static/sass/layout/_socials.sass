@@ -1,7 +1,7 @@
 .socials
     grid-area: socials
     font-size: 1.8rem 
-    max-width: 300px 
+    max-width: 400px 
     display: block    
     text-align: center
     padding: 1rem 1rem
@@ -25,15 +25,21 @@
     ul
         list-style-type: none
         display: flex
-        justify-content: space-around
+        justify-content: center
         margin: auto
-        max-width: 200px
+        // max-width: 200px
         
+        #nav-btn
+            justify-self: flex-start
+            margin-right: auto
         li
             border-radius: 50% 
             // flex: 1 1 auto
             text-align: center
-            margin: 1rem
+            margin: 0
+            // padding: 1rem
+            a
+                padding: 1.5rem
     
     img
         display: none
