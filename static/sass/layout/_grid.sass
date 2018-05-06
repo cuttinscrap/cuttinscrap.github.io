@@ -1,11 +1,11 @@
 body
     border: 1rem solid rgba(0, 0, 0, 0)
-    @include breakpoint(sm)
-        display: grid
-        grid-template-areas: "nav nav" "intro intro" "blog-map content" "disqus disqus" "instagram instagram" "foot foot"
-        grid-template-columns: 1fr 2fr
+    // @include breakpoint(sm)
+        // display: grid
+        // grid-template-areas: "nav nav" "intro intro" "blog-map content" "disqus disqus" "instagram instagram" "foot foot"
+        // grid-template-columns: 1fr 2fr
         // grid-template-rows: auto auto 600px auto
-        grid-gap: 1rem
+        // grid-gap: 1rem
         
 // #blog-promo
 //     margin-top: 5rem
@@ -26,8 +26,12 @@ body
     width: 500px
     
 #content
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    flex-grow: 1
     grid-area: content
-    max-width: 800px
+    // max-width: 800px
     
     margin: auto
     padding: 0.5rem

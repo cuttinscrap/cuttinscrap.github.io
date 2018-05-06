@@ -1,0 +1,26 @@
+
+extends ../../layout/layout
+
+block append config
+    -
+        config.title = "Downloads";
+        config.description = "Download patterns by Cuttin Scrap";
+        config.image = ""
+        config.url = "http://www.cuttinscrap.com/downloads";
+        config.card = "summary";
+    -
+
+block content
+    .card
+        h4 Downloads
+        p 
+            em Free Patterns By Cuttin Scrap
+        .flex
+            .item
+                p.
+                    Stars IN Stripes Quilt
+                a(href="/downloads/block_layouts/Stars_IN_Stripes_PDF.pdf", title="Stars_IN_Stripes_PDF")
+                    img(src="/static/img/thumbnails/Stars_IN_Stripes_PDF_100.png", alt="")
+
+
+

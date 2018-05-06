@@ -7,9 +7,10 @@ const template = `
     `
 var feed = new Instafeed({
     template: '{{ link }}',
+    // template: template,
     get: 'user',
     accessToken: "6762486136.17babc8.cac5e5d53c474d948211082754768a3e",
-    limit: 4,
+    limit: 10,
 });
 
 feed.run()

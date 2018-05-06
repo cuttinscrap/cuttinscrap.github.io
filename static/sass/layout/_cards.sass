@@ -2,7 +2,10 @@
 .card-clear
     display: block
     border-radius: $br
-    margin: 2rem auto
+    margin: 1rem
+    max-width: 1000px
+    min-width: 400px
+    flex-grow: 1
     // background-colsor: #FFF
     // box-shadow: $bs
     // border: 1px solid #999
@@ -95,3 +98,11 @@
 
 .no-pad
     padding: 0!important
+
+.flex
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+    .item
+        padding: 1rem

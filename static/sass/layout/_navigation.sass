@@ -1,4 +1,7 @@
 nav
+    background: $bg
+    position: sticky
+    top: 0px
     // .socials
     //     position: relative
     //     left: -2rem
@@ -7,15 +10,15 @@ nav
     grid-area: nav
     // min-height: 500px
 
-    max-width: 800px
+    // max-width: 800px
     margin: auto
-    padding: 0 1rem
+    // padding: 0 1rem
     display: block
     #ham, #X
-        float: left
-        text-align: left
+        // float: left
+        // text-align: left
         vertical-align: middle
-        padding: 2rem 0rem
+        // padding: 2rem 0rem
         margin: 0 4rem 0 0
         cursor: pointer
 
@@ -28,6 +31,7 @@ nav
         align-items: center
     #site-navigation
         height: 1rem
+        text-align: center
 
 
 
@@ -46,8 +50,6 @@ nav
             padding: 1rem
             
             li
-                flex: 1 1 auto
-                text-align: center
                 margin: 1.5rem
                 opacity: 0
 
@@ -113,11 +115,26 @@ nav.on
             padding: 1rem
 @include breakpoint(sm)
     nav
+        top: -8rem
+    nav.off
+    nav.init
+        #site-navigation
+            height: auto
+            display: block
+            ul
+                li
+                    opacity: 1
+    #ham, #x, #nav-btn
+        display: none
+        width: 0
+    
+    nav
         font-size: 1rem
         #site-navigation
             ul
 
                 display: flex
+                justify-content: center
         #nav-btn
             font-size: 1.4rem
             margin-left: 4rem
